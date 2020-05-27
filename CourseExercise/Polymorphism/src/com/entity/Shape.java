@@ -2,6 +2,7 @@ package com.entity;
 
 public abstract class Shape {
 	private String name;
+	private java.util.Date dateCreated;
 	
 	public Shape() {
 		this("nunamed");
@@ -13,7 +14,7 @@ public abstract class Shape {
 	
 	@Override
 	public String toString() {
-		return "Shape : " + name;
+		return "Shape : " + name + "Created on " + dateCreated;
 	}
 	
 	public abstract void drawSelf();
