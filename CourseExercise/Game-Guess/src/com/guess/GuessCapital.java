@@ -1,4 +1,4 @@
-package com;
+package com.guess;
 import java.util.Scanner;
 
 public class GuessCapital {
