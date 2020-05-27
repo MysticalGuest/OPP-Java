@@ -25,6 +25,7 @@ hs_err_pid*
 # eclipse configuration file
 .project
 .classpath
+org.eclipse.jdt.core.prefs
 
 # Gitignore file in internal folder
 .gitignore
