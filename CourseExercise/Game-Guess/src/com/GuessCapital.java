@@ -60,7 +60,11 @@ public class GuessCapital {
 			else
 				System.out.println("The correct answer should be " + capital[num][1]);
 			repe[turn]=num;
-			input.close();
+			/*
+			 * Scanner（system.in）在Scanner中接受的是键盘 输入，当调用close（）方法时
+			 * Scanner的关闭会导致System.in的关闭，System.in是标准输入（键盘输入），只能关一次，关闭后不能再打开
+			*/
+//			input.close();
 		}
 		System.out.println("Your correct count is " + count);
 		System.out.println("Your final score is " + score);
