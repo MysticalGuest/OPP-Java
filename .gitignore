@@ -29,3 +29,5 @@ org.eclipse.jdt.core.prefs
 
 # Gitignore file in internal folder
 .gitignore
+
+.idea
