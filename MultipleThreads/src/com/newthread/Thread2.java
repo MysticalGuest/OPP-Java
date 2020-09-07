@@ -6,7 +6,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.file.Counters.Counter;
 
 // 实现多线程同步下载图片
 public class Thread2 extends Thread {
