@@ -11,6 +11,10 @@ public class UnsafeList {
 		for (int i = 0; i < 1000; i++) {
 			new Thread(()->{
 				list.add(Thread.currentThread().getName());
+				
+//				synchronized (list) {  // 使安全
+//					list.add(Thread.currentThread().getName());
+//				}
 			}).start();
 		}
 		try {
