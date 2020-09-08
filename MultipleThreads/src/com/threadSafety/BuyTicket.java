@@ -3,11 +3,14 @@ package com.threadSafety;
 public class BuyTicket {
 	
 	public static void main(String[] args) {
-		Purchaser purchaser = new Purchaser();
+		Purchaser purchaser = new Purchaser();	// 一个对象
 		
+		// 三个线程
 		new Thread(purchaser, "Purchaser_1").start();
 		new Thread(purchaser, "Purchaser_2").start();
 		new Thread(purchaser, "Purchaser_3").start();
+		
+		// synchronized锁的是对象本身
 	}
 
 }
