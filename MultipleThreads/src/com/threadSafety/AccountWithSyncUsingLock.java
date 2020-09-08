@@ -50,7 +50,7 @@ public class AccountWithSyncUsingLock {
 				
 				balance = newBalance;
 			} catch (InterruptedException  ex) {
-				// TODO: handle exception
+				System.err.println(ex);
 			}
 			finally { //无论异常是否产生,finally子句总是会被执行
 				lock.unlock();  // 确保锁被释放
