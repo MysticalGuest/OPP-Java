@@ -67,7 +67,7 @@ public class AccountWithoutSync {
 			try {
 				Thread.sleep(5l);
 			} catch (InterruptedException ex) {
-				// TODO: handle exception
+				System.err.println(ex);
 			}
 			
 			balance = newBalance;
