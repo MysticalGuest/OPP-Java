@@ -7,7 +7,6 @@ public class Count {
 		try {
 			Thread.sleep(5l);
 		} catch (InterruptedException e) {
-			// TODO: handle exception
 		}
 		
 		num+=1;
