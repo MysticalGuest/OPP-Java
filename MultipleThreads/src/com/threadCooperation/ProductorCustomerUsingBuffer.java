@@ -4,7 +4,7 @@ package com.threadCooperation;
 /* 管程法：利用缓冲区解决
  * 需要：生产者、消费者、产品、缓冲区
  */
-public class TestProductorCustomer {
+public class ProductorCustomerUsingBuffer {
 
 	public static void main(String[] args) {
 		Buffer buffer = new Buffer();
