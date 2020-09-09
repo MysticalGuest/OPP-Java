@@ -3,8 +3,6 @@ package com.newthread;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 
-import com.sun.org.apache.bcel.internal.generic.NEW;
-
 // 模拟倒计时
 public class TestSleep2 {
 	public static void main(String[] args) {
