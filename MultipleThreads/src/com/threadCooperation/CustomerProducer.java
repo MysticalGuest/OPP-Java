@@ -95,8 +95,9 @@ public class CustomerProducer {
 			}
 			finally {
 				lock.unlock();; // Release the lock
-				return value;
+//				return value;
 			}
+			return value;
 		}
 	}
 
