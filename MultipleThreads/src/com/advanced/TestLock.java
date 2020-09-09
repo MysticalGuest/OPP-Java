@@ -1,6 +1,5 @@
 package com.advanced;
 
-import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 // 测试Lock锁
