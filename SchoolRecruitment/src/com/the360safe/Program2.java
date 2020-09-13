@@ -1,71 +1,49 @@
 package com.the360safe;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
+// 测试密码复杂度
 public class Program2 {
+	
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 
-		
-		Record record;
-		int numOfWorker;
-		int numOfRecord;
-		
-		int id;//工号
-		int flag;//是否上班
+		String password;
 
+		boolean isfit;
 		
 		while (input.hasNext()) {
-			ArrayList<Record> arrayList = new ArrayList<>();
-			numOfWorker = input.nextInt();
-			numOfRecord = input.nextInt();
-			
-			for (int i = 0; i < numOfRecord; i++) {
-				id = input.nextInt();
-				flag = input.nextInt();
-				record = new Record(id, flag);
-				arrayList.add(record);
-			}
-			
-			for (int i = 0; i < numOfRecord; i++) {
-				if (arrayList.get(i).flag==1) {
-					arrayList.add(new Record(arrayList.get(i).id, 0));
+			// 下标0表示数字，1表示小写字母，2表示大写字母，3表示其他
+			int flag[] = {0, 0, 0, 0};
+			isfit = true;
+			password = input.next();
+			char[] array = password.toCharArray();
+			for (int i = 0; i < array.length; i++) {
+				if(array[i]>='1'&&array[i]<='9') {
+					flag[0]++;
+				} else if (array[i]>='a'&&array[i]<='z') {
+					flag[1]++;
+				} else if (array[i]>='A'&&array[i]<='Z') {
+					flag[2]++;
 				} else {
-					arrayList.add(0, new Record(arrayList.get(i).id, 1));
+					flag[3]++;
 				}
 			}
 			
-
-			if (arrayList.size()==2) {
-				for (int i = 0; i < numOfWorker; i++) {
-					System.out.print(i+1+" ");
+			for (int i = 0; i < flag.length; i++) {
+				if(flag[i]==0) {
+					isfit=false;
 				}
+			}
+			
+			if(isfit) {
+				System.out.println("OK");
 			} else {
-				boolean b = true;
-				for (int i = 0; i < numOfWorker; i++) {
-//					for (int j = 0; j < numOfWorker; j++) {
-//						if (arrayList.get(j).id==i+1) {
-//							b=false;
-//							break;
-//						}
-//					}
-					if (b) {
-						System.out.print(i+1+" ");
-					}
-				}
+				System.out.println("Illegal Password");
 			}
 		}
+		
+		input.close();
 	}
 
-}
-
-class Record {
-	int id;
-	int flag;
-	
-	public Record(int id, int flag) {
-		this.flag=flag;
-		this.id=id;
-	}
 }
