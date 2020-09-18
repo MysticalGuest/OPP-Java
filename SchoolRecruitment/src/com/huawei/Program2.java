@@ -40,6 +40,8 @@ public class Program2 {
         	System.out.println(1);
         else
         	System.out.println(0);
+        
+        sc.close();
 	}
 	
 	public static boolean path(int[][] a, int x1, int y1, int m, int n, int step) {
