@@ -6,7 +6,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-public class Callable1 implements Callable<Boolean>{
+public class Callable1 implements Callable<Boolean> {
 
 	@Override
 	public Boolean call() throws Exception {
