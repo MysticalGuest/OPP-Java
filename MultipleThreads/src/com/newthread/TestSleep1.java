@@ -2,7 +2,8 @@ package com.newthread;
 
 // 模拟网络延时：放大问题的发生性
 public class TestSleep1 implements Runnable {
-private int ticketNum = 10;		// 票数
+    
+    private int ticketNum = 10;		// 票数
 	
 	@Override
 	public void run() {
