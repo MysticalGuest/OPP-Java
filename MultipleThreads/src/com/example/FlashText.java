@@ -19,7 +19,6 @@ public class FlashText extends Application {
 //		new Thread(new Runnable() {
 //			@Override
 //			public void run() {
-//				// TODO Auto-generated method stub
 //				try {
 //					while(true) {
 //						if(lblText.getText().trim().length() == 0)
@@ -31,7 +30,6 @@ public class FlashText extends Application {
 //							
 //							@Override
 //							public void run() {
-//								// TODO Auto-generated method stub
 //								lblText.setText(text);
 //							}
 //						});
@@ -39,7 +37,7 @@ public class FlashText extends Application {
 //						Thread.sleep(200);
 //					}
 //				} catch (Exception e) {
-//					// TODO: handle exception
+//					// handle exception
 //				}
 //			}
 //		}).start();
@@ -60,7 +58,7 @@ public class FlashText extends Application {
 				}
 				
 			} catch (Exception e) {
-				// TODO: handle exception
+				// handle exception
 			}
 		}).start();
 		
