@@ -19,26 +19,27 @@ public class TaskThreadDemo {
 		
 		thread3.start();
 //		thread1.run();
-//		thread2.run();;
-//		thread3.run();;
+//		thread2.run();
+//		thread3.run();
  	}
 }
 
 class PrintChar implements Runnable {
-	// TODO Auto-generated method stub
 	private char charToPrint; //The character to print
 	private int times;  //The number of times to repeat
-	/** Construct a task with a specified character and number of
-	 *  times to print the character
-	 */
+	
+	/** 
+	 * Construct a task with a specified character and number of times to print the character
+	 * */
 	public PrintChar(char c , int t) {
 		charToPrint = c;
 		times = t;
 	}
 	
-	@Override /** Override the run() method to tell the system
-	* what task to perform
-	*/
+	@Override 
+	/** 
+	 * Override the run() method to tell the system what task to perform
+	 * */
 	public void run() {
 		for(int i = 0; i < times; i++) {
 			System.out.print(charToPrint);
@@ -48,17 +49,20 @@ class PrintChar implements Runnable {
 
 //The task class for printing numbers from 1 to n for a given n
 class PrintNum implements Runnable {
-	// TODO Auto-generated method stub
 	private int lastNum;
 	
-	/** Construct a task for printing numbers from 1 to n for a given n*/
+	/** 
+	 * Construct a task for printing numbers from 1 to n for a given n
+	 * */
 	public PrintNum(int n) {
 		lastNum = n;
 	}
 	
-	@Override /** Override the run() method to tell the system
-	* what task to perform
-	*/
+	@Override 
+	/** 
+	 * Override the run() method to tell the system
+	 * what task to perform
+	 * */
 	public void run() {
 //		for(int i = 0; i < lastNum; i++) {
 //			System.out.print(""+i);
