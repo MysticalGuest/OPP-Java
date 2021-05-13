@@ -6,7 +6,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-public class TestPool {
+public class TestFixedThreadPool {
 	public static void main(String[] args) {
 	    /*
 	     * Java.util.concurrent.ExecutorService接口代表一种异步执行机制，它能够在后台执行任务。
