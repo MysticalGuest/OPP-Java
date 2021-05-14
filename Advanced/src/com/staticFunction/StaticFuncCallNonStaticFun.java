@@ -29,7 +29,6 @@ public class StaticFuncCallNonStaticFun {
         StaticFuncCallNonStaticFun.staticFunc();
         
         ((StaticFuncCallNonStaticFun)null).staticF();
-                
         
         /*
          * 静态方法属于类层级。
