@@ -17,7 +17,7 @@ public class TimeComparison1 {
 		long startTime = System.currentTimeMillis();
 		
 		for (int i = 0; i < list.size(); i++) {
-			//仅仅为了演示取出数据的时间,因此不对取出的数据进行打印
+			// 仅仅为了演示取出数据的时间,因此不对取出的数据进行打印
 			list.get(i);
 		}
 		long endTime = System.currentTimeMillis();
