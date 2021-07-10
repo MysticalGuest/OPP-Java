@@ -13,17 +13,17 @@ import java.util.Comparator;
 public class TestSort {
 	
 	//通过id排序
-	public static class SortById implements Comparator<Student>{
+	public static class SortById implements Comparator<Senior>{
 	    @Override
-	    public int compare(Student o1, Student o2) {
+	    public int compare(Senior o1, Senior o2) {
 	        return o1.id - o2.id;
 	    }
 	}
 
 	//通过age排序
-	public static class SortByAge implements Comparator<Student>{
+	public static class SortByAge implements Comparator<Senior>{
 	    @Override
-	    public int compare(Student o1, Student o2) {
+	    public int compare(Senior o1, Senior o2) {
 	        return o1.age - o2.age;
 	    }
 	}
@@ -47,18 +47,18 @@ public class TestSort {
         System.out.println(Arrays.toString(strArray2));
         
         // 对象数组
-        Student s1 = new Student(11110, 13);
-        Student s2 = new Student(11112, 12);
+        Senior s1 = new Senior(11110, 13);
+        Senior s2 = new Senior(11112, 12);
         
-        Student[] ss = {s1, s2};
+        Senior[] ss = {s1, s2};
         Arrays.sort(ss, new SortById()); // 按Id排序
-        for (Student s : ss) {
+        for (Senior s : ss) {
             System.out.print(s+" ");
         }
         
         System.out.println();
         Arrays.sort(ss, new SortByAge()); // 按年龄排序
-        for (Student s : ss) {
+        for (Senior s : ss) {
             System.out.print(s+" ");
         }
         
@@ -87,7 +87,7 @@ public class TestSort {
  * 但是如果是每个不同的类型的对象,我们都需要去分析数据,自己手动敲规则的话,过于麻烦.
  * 所以我们用到Comparable或者Comparator接口
  * */
-class Student  {
+class Senior  {
     int id;
     int age;
     @Override
@@ -98,7 +98,7 @@ class Student  {
                 '}';
     }
     
-    public Student(int id, int age){
+    public Senior(int id, int age){
         this.id = id;
         this.age = age;
     }
