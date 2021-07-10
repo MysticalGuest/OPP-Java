@@ -19,7 +19,7 @@ import java.util.ArrayList;
  */
 public class StudentTest {
     public static void main(String[] args) throws Exception {
-    	String path = "src/";
+    	String path = "src/com/arrayList/demo/";
     	
         Student s1 = new Student("Tom", 51);
         Student s2 = new Student("Jack", 26);
