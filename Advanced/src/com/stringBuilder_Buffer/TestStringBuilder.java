@@ -19,6 +19,9 @@ public class TestStringBuilder {
 		System.out.println(" s1.replace(): " + s1.replace(1, 3, "NEW"));
 		System.out.println(" s1.reverse(): " + s1.reverse());
 		System.out.println(" s1.reverse().replace(): " + s1.replace(1, 3, "NEW"));
+		String s2 = s1.toString();
+		System.out.println(s2.replaceAll("0", "XX"));
+		System.out.println(s2);
 
 	}
 
