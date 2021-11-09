@@ -135,14 +135,16 @@ public class ListGenerics {
         System.out.println("i:  " + i + "  f:  "+f + "  o:  "+o);
   
         /**指定泛型的时候*/  
-        int a=ListGenerics.<Integer>add(1, 2);//指定了Integer，所以只能为Integer类型或者其子类  
-        int b=ListGenerics.<Integer>add(1, 2.2);//编译错误，指定了Integer，不能为Float  
-        Number c=ListGenerics.<Number>add(1, 2.2); //指定为Number，所以可以为Integer和Float  
+        int a=ListGenerics.<Integer>add(1, 2);//指定了Integer，所以只能为Integer类型或者其子类
+        System.out.println(a);
+        int b=ListGenerics.<Integer>add(1, 2.2);//编译错误，指定了Integer，不能为Float
+        Number c=ListGenerics.<Number>add(1, 2.2); //指定为Number，所以可以为Integer和Float
+        System.out.println(c);
     }
     
     // 这是一个简单的泛型方法  
     public static <T> T add(T x,T y){  
-        return y;  
+        return y;
     }
     
     /**
