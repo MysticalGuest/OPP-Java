@@ -1,8 +1,11 @@
  package com.enterpriseQuestions;
 
- /**
+import org.junit.Test;
+
+/**
  * @author MysteryGuest
  * @date 2021/10/26
+ * 异常
  */
 public class ErrorMethod {
 
@@ -41,5 +44,79 @@ public class ErrorMethod {
         }
         
     }
+    
+    @Test
+    public void testOperater() {
+        int i = 5;
+        i += i -= i *= i++;
+        /** -15, 不同编译器结果不同？
+         * 解释型语言是-15，编译型语言是0而且会有警告？
+         * i += i -= i *= i++;-> i += i -= i *= 5;-> i += i -= 5 *= 5;->
+         * i += 5 -= 25;-> 5 += -20;->-15;???是这样的吗？
+         */
+        System.out.println(i);
+        int num=5;
+        num++;
+        num *= num;
+        num -= num;
+        num += num;
+        System.out.println(num);
+        int p = 5;
+        p = p++;
+        System.out.println(p);
+        p = ++p;
+        System.out.println(p);
+        int q=5;
+        q += q -= q *= ++q;
+        /** -15, 不同编译器结果不同？
+         * 解释型语言是-15，编译型语言是0而且会有警告？
+         * q += q -= q *= ++q;-> q += q -= q *= 6;-> q += q -= 5 *= 6;->
+         * i += 5 -= 30;-> 5 += -25;-> -20;???是这样的吗？
+         */
+        System.out.println(q);
+        
+    }
 
+    /**
+     * 下面代码编译运行的结果是？
+     * 提示：long是8个字节，而float是4个字节
+     * */
+    @Test
+    public void testLongAndFloat() {
+        long l = 123456; // 结尾加不加l无所谓
+        float f = 123.456F; // 结尾必须加f或F，因为它默认double，Type mismatch: cannot convert from double to float
+        
+//        l = f; // 报错，Type mismatch: cannot convert from float to long
+        l = (long)f; // 123
+        f = l; // 自动类型提升
+//        f = (float)l;
+        
+        System.out.println(l);
+        System.out.println(f);
+        
+    }
+    
+    @Test
+    /**
+     * 值传递与引用传递
+     * */
+    public void testString() {
+        Str s = new Str();
+        s.change(s.str, s.arr);
+        System.out.println(s.str); // java
+        System.out.println(s.arr); // apa
+    }
+}
+
+class Str{
+    String str = new String("java");
+    char[] arr = {'a', 'p', 'p'};
+    
+    /**
+     * 结论：string不变，数组变
+     * */
+    public void change(String str, char[] arr) {
+        str = "oop";
+        arr[2] = 'a';
+    }
 }
